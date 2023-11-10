@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-blog.css">
+
+    <script src="https://kit.fontawesome.com/ef1a7d16e5.js" crossorigin="anonymous"></script>
+    <!-- ESWIPER JS-->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <header id="header">
+       
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./img/logozoeTapia01.png" alt="logo" class="img-fluid">
+            </a>
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="#hero" class="menu_link active-link">INICIO</a>
+                </li>
+
+                <li class="menu_item">
+                    <a href="#about" class="menu_link">SOBRE MI</a>
+                </li>
+
+                <li class="menu_item">
+                    <a href="#resume" class="menu_link">FORMACIÓN</a>
+                </li>
+
+                <li class="menu_item">
+                    <a href="#portfolio" class="menu_link">TRABAJOS</a>
+                </li>
+
+                <li class="menu_item">
+                    <a href="#services" class="menu_link">BLOG</a>
+                </li>
+
+                <li class="menu_item">
+                    <a href="#contact" class="menu_link">CONTACTO</a>
+                </li>
+                <ion-icon name="close" class="close_icon"></ion-icon>
+            </ul>
+            <ion-icon name="funnel" class="toggle_icon"></ion-icon>
+        </div>
+    </header>
+
+    <main>
+      
+
+
+ <!-- ===============formacion profesional ==============-->
+
+        <section class="resume section" id="resume">
+            <div class="resume_container container grid">
+               
+                
+                <div class="resume_content">
+                    <div class="page one" id="page-1">
+                        <div class="resume_wrap">
+                            
+                            <div class="resume_wrap-content">
+                                
+                                <h4>¿QUÉ SON LOS PRINCIPIOS SOLID?</h4>
+                                <div>
+                                    <div>
+                                        <p>ACTUALIZADO POR: </p>
+                                    </div>
+                                    <div class="redes">
+
+                                    </div>
+                                </div>
+                                <img src="./img/solid2.jpg" alt="">
+                                <div class="contenido">
+                                    <p>
+                                        Los Principios SOLID tienen cinco principios de diseño de clases Orientado a Objetos. Son un conjunto de reglas y mejores prácticas a seguir al diseñar una estructura de clase.
+                                    </p> <br>
+                                    <p>
+                                        Estos cinco principios nos ayudan a comprender la necesidad de ciertos patrones de diseño y arquitectura de software en general. Así que creo que es un tema que todo desarrollador debería aprender.
+
+                                        Este artículo te enseñará todo lo que necesitas saber para aplicar los principios SOLID a tus proyectos.
+                                        
+                                        Empezaremos echando un vistazo a la historia de este término. Luego vamos a entrar en los detalles esenciales, los por qué y cómo de cada principio, creando un diseño de clase y mejorándolo paso a paso.
+                                        
+                                        ¡Así que toma una taza de café, mate o té y empecemos! 
+                                    </p>
+                                    <h4 class="subtitulo">
+                                        Antecedentes
+                                    </h4>
+                                    <p>
+                                        Los principios SOLID fueron introducidos por primera vez por el famoso científico informático Robert J. Martin (también conocido como el tío Bob) en uno de sus artículos en 2000. Pero el acrónimo SOLID fue introducido más tarde por Michael Feathers. <br>
+
+El tío Bob también es el autor de los libros best-sellers Clean Code y Clean Architecture, y es uno de los participantes de la "Alianza Agile". <br>
+
+Por lo tanto, no sorprende que todos estos conceptos de codificación limpia, arquitectura orientada a objetos y patrones de diseño estén de alguna manera conectados y se complementen entre sí. <br>
+
+
+
+
+                                    </p> <br>
+                                    <p>
+                                        Todos tienen el mismo propósito: <br>
+"Para crear código comprensible, legible y comprobable en el que muchos desarrolladores puedan trabajar en colaboración." <br>
+Veamos cada principio uno por uno. Siguiendo el acrónimo inglés SOLID, son:
+                                    </p> <br>
+                                   * El Principio de responsabilidad única (Single Responsibility Principle) <br>
+* El Principio Abierto-Cerrado (Open-Closed Principle)
+* El Principio de sustitución de Liskov (Liskov Substitution Principle) <br>
+* El Principio de segregación de interfaz (Interface Segregation Principle) <br>
+* El Principio de inversión de dependencia (Dependency Inversion Principle) <br>
+
+<p>
+   <span class="subtitulo"> Principio de responsabilidad única</span> <br>
+El Principio de Responsabilidad Única dice que <b> una clase debe hacer una cosa y,  por lo tanto, debe tener una sola razón  para cambiar.</b> <br> <br>
+
+Para enunciar este principio más técnicamente: Solo un cambio potencial (lógica de base de datos, lógica de registro, etc.) en la especificación del software debería poder afectar la especificación de la clase.
+
+<br> <br>Esto significa que si una clase es un contenedor de datos, como una clase Libro o una clase Estudiante, y tiene algunos campos relacionados con esa entidad, debería cambiar solo cuando cambiamos el modelo de datos.
+
+<br> <br>Es importante seguir el principio de responsabilidad única. En primer lugar, debido a que muchos equipos diferentes pueden trabajar en el mismo proyecto y editar la misma clase por diferentes motivos, esto podría dar lugar a módulos incompatibles.
+
+<br><br>En segundo lugar, facilita el control de versiones. Por ejemplo, digamos que tenemos una clase de persistencia que maneja las operaciones de la base de datos y vemos un cambio en ese archivo en las confirmaciones de GitHub. Al seguir el PRU, sabremos que está relacionado con el almacenamiento o con cosas relacionadas con la base de datos.
+
+<br><br>Los conflictos de fusión son otro ejemplo. Aparecen cuando diferentes equipos modifican el mismo archivo. Pero si se sigue el PRU, aparecerán menos conflictos: los archivos tendrán una sola razón para cambiar y los conflictos que existen serán más fáciles de resolver.
+
+<br><br><strong>Trampas comunes y Anti-patrones</strong>
+En esta sección, veremos algunos errores comunes que violan el Principio de Responsabilidad Única. Luego hablaremos sobre algunas formas de solucionarlos.
+
+<br><br>Veremos el código de un programa simple de facturación de librería como ejemplo. Comencemos definiendo una clase de libro para usar en nuestra factura.
+</p>
+<img src="./img/blog-img1.png" alt="">
+<p>
+    Esta es una clase de libro simple con algunos campos. Nada sofisticado. No estoy haciendo que los campos sean privados para que no tengamos que lidiar con getters y setters y podamos centrarnos en la lógica.
+
+<br><br>Ahora vamos a crear la clase de factura que contendrá la lógica para crear la factura y calcular el precio total. Por ahora, suponga que nuestra librería solo vende libros y nada más.
+</p>
+<img src="./img/blog-img2.png" alt="">
+
+<div>
+   <br> Aquí está nuestra clase de Factura. También contiene algunos campos sobre facturación y 3 métodos:
+
+<ul>
+    <li>
+      *  calculaTotal método que calcula el precio total,
+    </li>
+    <li>
+      *  imprimeFactura método que debería imprimir la factura por consola, y
+    </li>
+    <li>
+      *  guardaArchivo método responsable de escribir la factura en un archivo.
+    </li>
+</ul>
+<br>
+
+Debe darse un segundo para pensar en lo que está mal con este diseño de clase antes de leer el siguiente párrafo.
+
+<br><br>Bien, entonces, ¿qué está pasando aquí? Nuestra clase viola el Principio de Responsabilidad Única de múltiples maneras.
+
+<br><br>La primera violación es el método imprimeFactura, el cual contiene nuestra lógica de impressión. El PRU establece que nuestra clase solo debería tener una única razón para cambiar, y esa razón debería ser un cambio en el cálculo de la factura para nuestra clase.
+
+<br><br>Pero en esta arquitectura, si queremos cambiar el formato de impresión, necesitaríamos cambiar la clase. Esta es la razón por la que no deberíamos tener lógica de impresión mezclada con lógica de negocios en la misma clase.
+
+<br><br>Hay otro método que viola el PRU en nuestra clase: el método guardarArchivo. También es un error extremadamente común mezclar la lógica de persistencia con la lógica de negocios.
+
+<br><br>No piense solo en términos de escribir en un archivo, podría ser guardarlo en una base de datos, hacer una llamada a la API u otras cosas relacionadas con la persistencia.
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                   
+                    </div>
+
+                  
+                </div>
+                <div class="resume_tabs">
+                                    
+                    <div class="articulo1">
+                        <div>
+                                <h4>ULTIMAS PUBLICACIONES</h4>
+                        <hr>
+                        <br>
+                        <ul>
+                            <li>* Matrices bidireccional con python </li>
+                            <li>* Diccionarios con Python</li>
+                            <li>* Tipos de base de datos</li>
+                            <li>Conexion a una BD</li>
+                            <li>* Arquitectura de software</li>
+                            <li>* Callback con Javascript</li>
+                            <li>* Relacion entre tablas</li>
+                            <li>* Diagrama de clase</li>
+                            <li>* Funciones con Javascript</li>
+                        </ul>
+                        </div> <br>
+                        <br>
+                        <div>
+                            <h4>POPULAR TAGS </h4>
+                    <hr>
+                    <br>
+                    <ul>
+                        <li>* Matrices bidireccional con python </li>
+                        <li>* Diccionarios con Python</li>
+                        <li>* Tipos de base de datos</li>
+                        <li>Conexion a una BD</li>
+                        <li>* Arquitectura de software</li>
+                        <li>* Callback con Javascript</li>
+                        <li>* Relacion entre tablas</li>
+                        <li>* Diagrama de clase</li>
+                        <li>* Funciones con Javascript</li>
+                    </ul>
+                    </div>
+                       
+                    </div>
+                    <br>
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+ <!-- ===============  BLOG ==============-->
+
+ <section class="blog">
+   
+    <h3 class="section-title">Temas relacionado a la programacion  <br> y noticias de actualidad</h3>
+    <div class="container">
+        <div class="item-blog">
+            <div class="date"><h3>23</h3>Jul.</div>
+            <img src="./img/solid1.jpg" alt="">
+            <h4>PRINCIPIOS SOLID</h4>
+            <p>Jim Morisson Says when the music
+            over turn off the light. Jim Morisson Says when the music
+            over turn off the light</p>
+            <button>Leer mas</button>
+        </div>
+        <div class="item-blog">
+            <div class="date"><h3>17</h3>Agos.</div>
+            <img src="./img/patrones-diseño.jpg" alt="">
+            <h4>PATRONES DE DISEÑO</h4>
+            <p>Jim Morisson Says when the music
+                over turn off the light. Jim Morisson Says when the music
+                over turn off the light</p>
+                <button>Leer mas</button>
+        </div>
+        <div class="item-blog">
+            <div class="date"><h3>04</h3>Set.</div>
+            <img src="./img/bigdata1.jpg" alt="">
+            <h4>BIG DATA</h4>
+            <p>Jim Morisson Says when the music
+                over turn off the light. Jim Morisson Says when the music
+                over turn off the light</p>
+                <button>Leer mas</button>
+        </div>
+    </div>
+</section> 
+  
+
+
+
+
+
+
+
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="list">
+            <img src="./img/logozoeTapia01.png" alt="">
+            
+        </div>
+        <div class="copyright">
+            <p>&#169; 2023 Luis Tapia Ig. - Todos los derechos reservados.</p>
+          
+        </div>
+        <div class="social-icon">
+            <a href="#"> <ion-icon name="logo-github"></ion-icon>  </a>
+                    <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                    <a href="#"> <ion-icon name="logo-github"></ion-icon>  </a>
+                    <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+
+<script src="./js/particles.min.js"></script>
+<script src="./js/particles.js"></script>
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- MIXI TUP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./js/main.js"></script>
+</html>
