@@ -1253,6 +1253,12 @@ header .container{
     width: 500px;
 }
 
+.right-details ul li{
+    color: var(--main-color);
+    margin-top: 1rem;
+    font-size: 15px;
+}
+
 @media only screen and (max-width: 992px) {
     .contact .container {
         column-gap: 20px;
